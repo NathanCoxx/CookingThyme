@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbg2"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/oneBtn"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="144dp"
+        android:layout_height="58dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/roundedbutton"
+        android:text="One Timer"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="@+id/guideline10" />
+
+    <Button
+        android:id="@+id/twoBtn"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="144dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Two Timers"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintStart_toEndOf="@+id/oneBtn" />
+
+    <Button
+        android:id="@+id/threeBtn"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="144dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Three Timers"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <Button
+        android:id="@+id/bCanTimers"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="162dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Create As Needed"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/commonBtn"
+        app:layout_constraintStart_toStartOf="@+id/guideline10" />
+
+    <Button
+        android:id="@+id/commonBtn"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="162dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/roundedbutton"
+        android:text="See Common Times "
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline10" />
+
+    <Button
+        android:id="@+id/fourTimersBtn"
+        android:layout_width="144dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/roundedbutton"
+        android:text="four timers"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toEndOf="@+id/threeBtn"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="278dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="32dp"
+        android:text="SELECT NUMBER OF TIMERS:"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif-thin"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        tools:text="SELECT NUMBER OF TIMERS:" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="183dp" />
+
+
+</android.support.constraint.ConstraintLayout>

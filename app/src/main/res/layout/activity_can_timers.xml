@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CANTimers">
+
+    <TextView
+        android:id="@+id/tvTimer1"
+        android:layout_width="156dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="36sp"
+        app:fontFamily="sans-serif-thin"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addTimer2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Add Timer"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/tvTimer2"
+        android:layout_width="182dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="36sp"
+        app:fontFamily="sans-serif-thin"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/tvTimer1" />
+
+
+    <TextView
+        android:id="@+id/tvTimer3"
+        android:layout_width="166dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="36sp"
+        app:fontFamily="sans-serif-thin"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addTimer3Btn"
+        android:background="@drawable/roundedbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:text="Add Timer"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimer4"
+        android:layout_width="180dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="36sp"
+        app:fontFamily="sans-serif-thin"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/tvTimer3" />
+
+    <Button
+        android:id="@+id/addTimer4Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Add TImer"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="2dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <EditText
+                android:id="@+id/etTimer1Name"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/background_light"
+                android:ems="10"
+                android:hint="Enter Timer Name:"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/etTimer2Name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etTimer2Name"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+
+                android:background="@android:color/background_light"
+                android:ems="10"
+                android:hint="Enter Timer Name:"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/etTimer1Name"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etTimer1Min"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/background_light"
+                android:ems="10"
+                android:hint="Enter Minutes:"
+                android:inputType="number"
+
+                app:layout_constraintEnd_toStartOf="@+id/etTimer2Min"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etTimer1Name" />
+
+            <EditText
+                android:id="@+id/etTimer2Min"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+
+                android:background="@android:color/background_light"
+                android:ems="10"
+                android:hint="Enter Minutes:"
+                android:inputType="number"
+
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/etTimer2Min"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etTimer1Name" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/set_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/roundedbutton"
+                android:text="Set"
+                tools:layout_editor_absoluteX="64dp" />
+
+            <Button
+                android:id="@+id/set_button2"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedbutton"
+                android:text="Set"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_view_countdown"
+                android:layout_width="123dp"
+                android:layout_height="72dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/boarder2"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="60sp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="169dp"
+                tools:text="00:00" />
+
+
+            <TextView
+                android:id="@+id/text_view_countdown2"
+                android:layout_width="155dp"
+                android:layout_height="72dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+
+                android:background="@drawable/boarder2"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="60sp"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="169dp"
+                tools:text="00:00" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buton_start_pause"
+                android:layout_width="94dp"
+                android:layout_height="69dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/roundedbutton"
+                android:text="Start"
+
+                tools:layout_editor_absoluteX="64dp"
+                tools:layout_editor_absoluteY="241dp" />
+
+            <Button
+                android:id="@+id/buton_start_pause2"
+                android:layout_width="94dp"
+                android:layout_height="69dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+
+                android:background="@drawable/roundedbutton"
+                android:text="Start"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="253dp"
+                tools:layout_editor_absoluteY="241dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etTimer3Name"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/background_light"
+                android:ems="10"
+                android:hint="Enter Timer Name:"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="18dp"
+                tools:layout_editor_absoluteY="350dp" />
+
+            <EditText
+                android:id="@+id/etTimer4Name"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/background_light"
+                android:ems="10"
+                android:hint="Enter Timer Name:"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="214dp"
+                tools:layout_editor_absoluteY="350dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etTimer3Min"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/background_light"
+                android:ems="10"
+                android:hint="Enter Minutes:"
+                android:inputType="number"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="19dp"
+                tools:layout_editor_absoluteY="395dp" />
+
+            <EditText
+                android:id="@+id/etTimer4Min"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/background_light"
+                android:ems="10"
+                android:hint="Enter Minutes:"
+                android:inputType="number"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="215dp"
+                tools:layout_editor_absoluteY="395dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/set_button3"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedbutton"
+                android:text="Set"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/set_button4"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedbutton"
+                android:text="Set"
+                android:visibility="invisible" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/text_view_countdown3"
+                android:layout_width="155dp"
+                android:layout_height="72dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/boarder2"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="60sp"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="569dp"
+                tools:text="00:00" />
+
+            <TextView
+                android:id="@+id/text_view_countdown4"
+                android:layout_width="155dp"
+                android:layout_height="72dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/boarder2"
+                android:text="00:00"
+                android:textColor="@android:color/black"
+                android:textSize="60sp"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="213dp"
+                tools:layout_editor_absoluteY="491dp"
+                tools:text="00:00" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buton_start_pause3"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="94dp"
+                android:layout_height="69dp"
+                android:background="@drawable/roundedbutton"
+                android:text="Start"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="646dp" />
+
+            <Button
+                android:id="@+id/buton_start_pause4"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="94dp"
+                android:layout_height="69dp"
+                android:background="@drawable/roundedbutton"
+                android:text="Start"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="241dp"
+                tools:layout_editor_absoluteY="646dp" />
+        </TableRow>
+    </TableLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="93dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="340dp" />
+
+</android.support.constraint.ConstraintLayout>

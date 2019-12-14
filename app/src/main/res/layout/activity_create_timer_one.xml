@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbg2"
+    tools:context=".CreateTimerOne">
+
+    <EditText
+        android:id="@+id/editTimerName"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="39dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Enter Timer Name:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/editTime"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="50dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+
+        android:hint="Enter Minutes"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/nxtButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTimerName" />
+
+    <Button
+        android:id="@+id/nxtButton"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedbutton"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTime" />
+
+</android.support.constraint.ConstraintLayout>
